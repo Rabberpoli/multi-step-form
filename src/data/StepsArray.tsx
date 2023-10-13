@@ -1,6 +1,6 @@
 export interface StepsArray {
     id: number,
-    description: string
+    description: string,
 }
 
 const steps: StepsArray[] = [

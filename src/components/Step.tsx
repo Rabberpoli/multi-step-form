@@ -1,13 +1,13 @@
 import { StepsArray } from "../data/StepsArray";
 
-function Step(props: StepsArray) {
+function Step(props: any) {
   const label = 'STEP ' + (props.id + 1);
 
   return (
     <>
       <div className="mb-25 display-flex">
-        <div className="step-number-size mr-15 display-flex justify-center">
-            <div className="align-center color-p-step font-size-14 bold">
+        <div className={"step-number-size mr-15 display-flex justify-center" + (props.currentStepNumber === props.id ? " active-step" : "" )}>
+            <div className={"align-center color-p-step font-size-14 bold" + (props.currentStepNumber === props.id ? " active-step-text" : "" )}>
                 { props.id }
             </div>
         </div>
